@@ -10,7 +10,7 @@ services:
       PROXY_AUTH_WHITELIST: "/keykin"
 
   server:
-    image: ghcr.io/sybenx/keykin-box:0.1.0@sha256:b7b5887bd4ed67003a78f931cbed7dd87e860d7f12db11e70502c71d3095dd1c
+    image: ghcr.io/sybenx/keykin-box:0.1.2@sha256:1e41baee0e458d014423e0ca7d348df4448e862cb299038326e766287acca88d
     user: "1000:1000"
     restart: on-failure
     read_only: true

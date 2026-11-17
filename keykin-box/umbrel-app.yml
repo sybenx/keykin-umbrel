@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.0"
+version: "0.1.2"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -21,7 +21,9 @@ description: >-
 
 
   Beta: the way Keykin splits a key has not had an outside review.
-releaseNotes: ""
+releaseNotes: >-
+  You can now bring in a key you already have. Someone can ask for an account from their
+  device and you approve it on the admin page.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
