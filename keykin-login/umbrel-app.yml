@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.4"
+version: "0.1.5"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -24,7 +24,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  Sign in by scanning the code with your phone, the way any site does. A phone that has never used this server can sign in too.
+  On a phone, the sign-in page shows a button that opens Marble, since a phone cannot scan its own screen.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
