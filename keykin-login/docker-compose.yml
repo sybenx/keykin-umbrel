@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: keykin-login_server_1
+      APP_PORT: 7470
+      # The account page has its own sign-in and is meant to be public.
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: ghcr.io/sybenx/keykin-login:0.1.0
+    user: "1000:1000"
+    restart: on-failure
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      KEYKIN_BOX: http://keykin-box_server_1:7461
+      KEYKIN_LOGIN_ADDR: 0.0.0.0
+      KEYKIN_LOGIN_PORT: "7470"

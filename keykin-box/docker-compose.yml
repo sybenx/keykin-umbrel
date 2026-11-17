@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: keykin-box_server_1
+      APP_PORT: 7460
+      # Devices on the private network talk to /keykin with their own signed requests, so it is
+      # not behind the Umbrel login. Everything else on this port is.
+      PROXY_AUTH_WHITELIST: "/keykin"
+
+  server:
+    image: ghcr.io/sybenx/keykin-box:0.1.0
+    user: "1000:1000"
+    restart: on-failure
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      KEYKIN_DIR: /data
+      KEYKIN_ADDR: 0.0.0.0
+      KEYKIN_PORT: "7460"
+      # The side door: only device requests and the account page's calls. Keykin Login talks to it.
+      KEYKIN_SIDE_PORT: "7461"
+      # The admin page is only reachable through the Umbrel login, so it asks for nothing itself.
+      KEYKIN_BEHIND_LOGIN: "1"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data

@@ -1,0 +1,45 @@
+manifestVersion: 1
+id: keykin-box
+category: social
+name: Keykin Box
+version: "0.1.0"
+tagline: The always-on piece of your Nostr key
+icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
+description: >-
+  Keykin keeps a Nostr key in pieces. Each of your devices holds one and this box holds one.
+  Any two pieces sign together, and one alone can do nothing, so the whole key is never in
+  one place.
+
+
+  This app is the box: it holds its piece of each account, helps your devices sign, and
+  serves the admin page. The admin page is behind your Umbrel login. On it you approve
+  requests for new accounts, see every account's devices, and block or unblock them.
+
+
+  Keep it on a private network. To let devices reach it from outside, and to get the account
+  page, install Keykin Login too.
+
+
+  Beta: the way Keykin splits a key has not had an outside review.
+releaseNotes: ""
+developer: sybenx
+website: https://github.com/sybenx/keykin
+dependencies: []
+repo: https://github.com/sybenx/keykin
+support: https://github.com/sybenx/keykin/issues
+port: 7460
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: sybenx
+submission: https://github.com/sybenx/keykin-umbrel
+environment:
+  - name: KEYKIN_URL
+    services:
+      - server
+    note: The address devices reach this box at, for the codes its pages show. With Keykin Login behind a public name, put that here, for example https://account.example.com. Leave it empty to use the address your browser used.
+# The box's piece of every account is in its state file. A backup that keeps an old copy
+# keeps pieces that cycling the keys was meant to end.
+backupIgnore:
+  - data

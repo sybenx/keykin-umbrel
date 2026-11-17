@@ -1,0 +1,39 @@
+manifestVersion: 1
+id: keykin-login
+category: social
+name: Keykin Login
+version: "0.1.0"
+tagline: The account page for your Keykin box
+icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
+description: >-
+  Keykin Login is the outside door of a Keykin Box. It serves the account page, where you
+  see your devices and what is signed in, block a device, end a sign-in, add a device and
+  sign in to sites. You sign in to it with a device or with a username and password.
+
+
+  It holds no piece of any key and no account data. It passes two things to the box and
+  nothing else: your devices' signed requests, and the account page's own calls. The admin
+  page is not in it at all.
+
+
+  It is meant to be reached from outside, so it is not behind your Umbrel login. Put a
+  reverse proxy with https in front of port 7470: password sign-in only works over https.
+  Stopping this app closes the outside door. The box, its admin page and devices on your
+  private network keep working.
+
+
+  Beta: the way Keykin splits a key has not had an outside review.
+releaseNotes: ""
+developer: sybenx
+website: https://github.com/sybenx/keykin
+dependencies:
+  - keykin-box
+repo: https://github.com/sybenx/keykin
+support: https://github.com/sybenx/keykin/issues
+port: 7470
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: sybenx
+submission: https://github.com/sybenx/keykin-umbrel
