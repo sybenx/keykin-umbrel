@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.3"
+version: "0.1.4"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  An account can be moved here from another Keykin box. A site can be limited to posting only. A second box in an account can be removed.
+  The account page signs in the way any site does, by a scanned code. A new setting, KEYKIN_OPEN, lets anyone who signs in there bring their account onto this box.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
@@ -40,6 +40,10 @@ environment:
     services:
       - server
     note: The address devices reach this box at, for the codes its pages show. With Keykin Login behind a public name, put that here, for example https://account.example.com. Leave it empty to use the address your browser used.
+  - name: KEYKIN_OPEN
+    services:
+      - server
+    note: Set to 1 to let anyone who signs in on the account page bring their account onto this box. Leave it empty and a new account needs a code from this admin page.
 # The box's piece of every account is in its state file. A backup that keeps an old copy
 # keeps pieces that cycling the keys was meant to end.
 backupIgnore:
