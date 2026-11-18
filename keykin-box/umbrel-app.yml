@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.7"
+version: "0.1.8"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  No change to the box. Released together with Keykin Login 0.1.7.
+  Works with Keykin Login 0.1.8: passkeys, and sites that send you to your login page to sign in.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
