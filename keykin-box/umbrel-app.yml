@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.5"
+version: "0.1.6"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  The account page signs in the way any site does, by a scanned code. A new setting, KEYKIN_OPEN, lets anyone who signs in there bring their account onto this box.
+  One account can sign as more than one identity (child keys). The box signs for them with the piece it already holds.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
