@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.10"
+version: "0.1.11"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -24,7 +24,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  Passkeys use your box's login page address when it is set, so a lookalike address can't make or use them.
+  A site never signs you in without a click: the page asks Sign in to <site> as <name>?, shows which site really sent you, and warns when that does not match. Choose your main account or a separate one for that site. Security lists your signed-in browsers with Sign out on each. Your sign-in page address is published as kind 10046, with the old kind kept while sites move over.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
