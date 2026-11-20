@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.13"
+version: "0.1.15"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  Marble on a Mac can now sign in through your account page: press Add there, and the approval goes straight back to that Mac, the way desktop apps sign in. A device added from the account page only gets its piece once it shows that approval, so a link from someone else can't add their device.
+  An alert at the top of the admin page while your login page address isn't set. Your account page can ask your phone to publish your sign-in page.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
