@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.21"
+version: "0.1.22"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -24,7 +24,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  A phone that signs in with your name comes back to its app once you press Add on your account page.
+  In dark mode, the account page's link buttons, like "Do not sign in there", are no longer white boxes.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
