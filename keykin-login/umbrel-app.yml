@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.20"
+version: "0.1.21"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
