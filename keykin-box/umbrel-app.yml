@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.20"
+version: "0.1.23"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  A bunker link asked for on your account page can carry the site's name and its private lists and DMs switches. The box passes them to your phone with the request.
+  A site signed in from your account page now gets the private lists and DMs switches you chose there. The box passes them to your phone with the sign-in.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
