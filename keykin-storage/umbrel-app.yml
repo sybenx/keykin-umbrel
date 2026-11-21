@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: keykin-storage
+category: files
+name: Keykin Storage
+version: "0.1.0"
+tagline: A home for your files, and your friends'
+icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-storage.svg
+description: >-
+  A Blossom server for your Nostr account. Your account and friends you add can store files on
+  it; anyone can read a file by its hash. Marble's vaults keep their files encrypted, so this box
+  only ever sees ciphertext.
+
+
+  Nothing is deleted behind your back. When the last owner of a file deletes it, it waits 30
+  days in a bin, still on disk and still served, so a mistake or a stolen phone can be undone.
+  Each friend has a quota.
+
+
+  Phones and other servers need to reach it from outside, so give it a public address (a
+  Cloudflare Tunnel or your own reverse proxy) and put that address in STORAGE_PUBLIC_URL. Set
+  STORAGE_OWNER to your npub. Until both are set it serves nothing new and refuses uploads.
+
+
+  Beta: it has had one review, not an outside one.
+releaseNotes: >-
+  First release: uploads, mirrors, lists and deletes for your account and friends, with quotas
+  and a 30-day bin.
+developer: sybenx
+website: https://github.com/sybenx/keykin-storage
+dependencies: []
+repo: https://github.com/sybenx/keykin-storage
+support: https://github.com/sybenx/keykin-storage/issues
+port: 7480
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: sybenx
+submission: https://github.com/sybenx/keykin-umbrel
+environment:
+  - name: STORAGE_PUBLIC_URL
+    services:
+      - server
+    note: The address phones and other servers reach this box at, for example https://storage.example.com. Uploads must name this address, so it has to be the one in your Nostr server list.
+  - name: STORAGE_OWNER
+    services:
+      - server
+    note: Your npub. Your account can store without a limit. Add friends with the command in the README.
+# Blobs can be terabytes, and this box is itself the copy that keeps them. The database (accounts,
+# owners, the bin) is small and is backed up.
+backupIgnore:
+  - data/blobs
+  - data/tmp

@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: keykin-storage_server_1
+      APP_PORT: 7480
+      # Blossom is public by design: writes carry their own signed authorization, reads are by hash.
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: ghcr.io/sybenx/keykin-storage:0.1.0@sha256:94de730fc413bcfd0a1e26d3449ddb091d2e915dffcd2e9dc7e38eb0dd189e67
+    user: "1000:1000"
+    restart: on-failure
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      STORAGE_DIR: /data
+      STORAGE_ADDR: 0.0.0.0
+      STORAGE_PORT: "7480"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
