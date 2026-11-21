@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.23"
+version: "0.1.27"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -24,7 +24,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  Signing a site in from your account page shows "Read your private lists" and "Read and send DMs". Private lists starts on when the site asks to decrypt, so Marble Web can open your notes.
+  Sites and apps is in order: apps first, then websites, with the most recently used at the top and anything never used at the bottom.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:

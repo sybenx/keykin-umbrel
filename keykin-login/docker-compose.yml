@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/sybenx/keykin-login:0.1.23@sha256:2e4fb45fbf184ddc98cb235f6a0ff8f062b1867310736c026d5160113164dee0
+    image: ghcr.io/sybenx/keykin-login:0.1.27@sha256:f4d1f135311eec07982ce7d5cb1daff0260b5885396e110f3b424ddf888cac9e
     user: "1000:1000"
     restart: on-failure
     read_only: true
