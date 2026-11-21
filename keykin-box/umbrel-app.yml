@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.24"
+version: "0.1.25"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  The box now decides what is hard to undo and says why. Things you would never do by accident, like erasing your account or emptying your follow list, are signed only with your phone's fingerprint. Update Marble to 0.16.7 or newer first.
+  Every change an app or a site makes to your relay list or your DM relays now needs your yes, even adding a relay. A key an app was given of its own can still set its own relays freely. Update Marble to 0.16.9 to be asked, with the choice to give that app its own account.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
