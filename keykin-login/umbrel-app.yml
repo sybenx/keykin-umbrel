@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.28"
+version: "0.1.30"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -24,7 +24,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  Typing the account page's address starts clean, instead of showing the last device you added and the site you came from then. The box to paste a site's nostrconnect:// code is on the Home card from the start.
+  After you connect a site with its nostrconnect:// code, the card names it at once (Jumble is connected) and no longer shows "null" while its row comes in. Also updates the passkey library with a security fix.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
