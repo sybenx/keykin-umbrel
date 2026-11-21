@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.26"
+version: "0.1.29"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  The box now keeps a limit on what can pile up over time: sign-in sessions for accounts it does not hold, unused codes, and devices per account. Nothing you use day to day changes.
+  When an app or a site writes one of your lists and the box has no earlier version to compare it with, it now asks first, so a full list made elsewhere is not replaced unnoticed. Marble 0.16.15 sends the box the version your phone knows, so most lists are compared as before.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
