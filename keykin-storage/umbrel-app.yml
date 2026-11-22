@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-storage
 category: files
 name: Keykin Storage
-version: "0.2.0"
+version: "0.3.0"
 tagline: A home for your files, and your friends'
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-storage.svg
 description: >-
@@ -27,11 +27,9 @@ description: >-
 
   Beta: it has had two reviews, not an outside one.
 releaseNotes: >-
-  Fixes from a security review: quota checks stay fast with many files, small files count for
-  what they cost on disk, signed requests are rate limited, uploads that trickle are cut off,
-  and only pictures, video and audio are shown in the browser. Mirroring is now for the owner
-  only. New commands erase a file at once. Accounts can follow a home's member list. If this
-  box is behind a Cloudflare Tunnel, set STORAGE_BEHIND_CLOUDFLARE to true.
+  The owner of a home, and its admins, can now see how much space each person uses and what is
+  in the bin from their account page, and restore or erase files there. Restoring a file gives
+  it back to the person it belonged to.
 developer: sybenx
 website: https://github.com/sybenx/keykin-storage
 dependencies: []
