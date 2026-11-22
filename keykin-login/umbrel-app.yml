@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.31"
+version: "0.1.32"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -30,7 +30,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  A Shared home section on the account page, for the owner and admins of a DMs home whose files are kept on this box: the people in the home and who invited whom, who sees where photos were taken, removing someone (keeping or removing the people they invited), letting people back in, space used on the box, the bin with restore and erase, and linking the file server to the home. Set the home's address in this app's settings to turn it on. Changes there are signed by your phone, so the section asks for a scan each visit.
+  Shared home is easier to read. Space shows what the home's photos and files take, then the room left on your box. Each person's row says how and when they joined, what they store, and when they were last here, and people with no name yet are grouped at the bottom, oldest first. Technical details and Unlink are behind Advanced.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
