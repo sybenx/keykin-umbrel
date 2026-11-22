@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.32"
+version: "0.1.33"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -30,7 +30,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  Shared home is easier to read. Space shows what the home's photos and files take, then the room left on your box. Each person's row says how and when they joined, what they store, and when they were last here, and people with no name yet are grouped at the bottom, oldest first. Technical details and Unlink are behind Advanced.
+  Devices on the account page has a Recent signing list: which device signed with your box, what it signed, for which site, and when. Signatures two devices make while the box is off are not listed yet. Needs Keykin Box 0.1.33.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
