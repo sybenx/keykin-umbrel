@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-box
 category: social
 name: Keykin Box
-version: "0.1.34"
+version: "0.1.35"
 tagline: The always-on piece of your Nostr key
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-box.svg
 description: >-
@@ -22,7 +22,7 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  A site or app can now be limited to posts and messages, next to posts only. A box run outside Umbrel that lost its owner secret can make a new one: put an empty file named reset-owner beside its state and restart it. On Umbrel nothing changes, since the Umbrel login is the lock.
+  The box now writes one line to its log for each request from a device, with how long it took and never a secret, so a slow or failing step is easy to find.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies: []
