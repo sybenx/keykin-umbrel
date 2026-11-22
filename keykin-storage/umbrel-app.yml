@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-storage
 category: files
 name: Keykin Storage
-version: "0.1.0"
+version: "0.2.0"
 tagline: A home for your files, and your friends'
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-storage.svg
 description: >-
@@ -21,10 +21,17 @@ description: >-
   STORAGE_OWNER to your npub. Until both are set it serves nothing new and refuses uploads.
 
 
-  Beta: it has had one review, not an outside one.
+  It can follow a home's member list: set STORAGE_HOME_URL and everyone in that home gets an
+  account, and anyone removed from the home loses theirs.
+
+
+  Beta: it has had two reviews, not an outside one.
 releaseNotes: >-
-  First release: uploads, mirrors, lists and deletes for your account and friends, with quotas
-  and a 30-day bin.
+  Fixes from a security review: quota checks stay fast with many files, small files count for
+  what they cost on disk, signed requests are rate limited, uploads that trickle are cut off,
+  and only pictures, video and audio are shown in the browser. Mirroring is now for the owner
+  only. New commands erase a file at once. Accounts can follow a home's member list. If this
+  box is behind a Cloudflare Tunnel, set STORAGE_BEHIND_CLOUDFLARE to true.
 developer: sybenx
 website: https://github.com/sybenx/keykin-storage
 dependencies: []
@@ -46,6 +53,18 @@ environment:
     services:
       - server
     note: Your npub. Your account can store without a limit. Add friends with the command in the README.
+  - name: STORAGE_BEHIND_CLOUDFLARE
+    services:
+      - server
+    note: Set to true when a Cloudflare Tunnel is the way in. The rate limit then counts each visitor by their own address. Leave empty otherwise.
+  - name: STORAGE_HOME_URL
+    services:
+      - server
+    note: Optional. The https address of a home whose members get accounts here. Register this box's key on the home first (the README says how).
+  - name: STORAGE_MEMBER_QUOTA
+    services:
+      - server
+    note: Optional. How much each member of the home may store, for example 5G. The default is 5G.
 # Blobs can be terabytes, and this box is itself the copy that keeps them. The database (accounts,
 # owners, the bin) is small and is backed up.
 backupIgnore:

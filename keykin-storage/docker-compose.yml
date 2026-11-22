@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/sybenx/keykin-storage:0.1.0@sha256:94de730fc413bcfd0a1e26d3449ddb091d2e915dffcd2e9dc7e38eb0dd189e67
+    image: ghcr.io/sybenx/keykin-storage:0.2.0@sha256:be81c526e849d961872a0d69969fed7bbc332ebf7788e38eb85db3fa57accbb9
     user: "1000:1000"
     restart: on-failure
     read_only: true
@@ -17,6 +17,8 @@ services:
       - ALL
     security_opt:
       - no-new-privileges:true
+    mem_limit: 512m
+    pids_limit: 64
     environment:
       STORAGE_DIR: /data
       STORAGE_ADDR: 0.0.0.0
