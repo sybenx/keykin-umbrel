@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.30"
+version: "0.1.31"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -22,9 +22,15 @@ description: >-
   private network keep working.
 
 
+  With a home's address set below, the account page also has a Shared home section, where the
+  owner and admins of that DMs home manage its people, photos and space. The page calls the home
+  and its file server itself, signed by your phone; this app only lets the page reach those two
+  addresses.
+
+
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  After you connect a site with its nostrconnect:// code, the card names it at once (Jumble is connected) and no longer shows "null" while its row comes in. Also updates the passkey library with a security fix.
+  A Shared home section on the account page, for the owner and admins of a DMs home whose files are kept on this box: the people in the home and who invited whom, who sees where photos were taken, removing someone (keeping or removing the people they invited), letting people back in, space used on the box, the bin with restore and erase, and linking the file server to the home. Set the home's address in this app's settings to turn it on. Changes there are signed by your phone, so the section asks for a scan each visit.
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
@@ -38,3 +44,12 @@ defaultUsername: ""
 defaultPassword: ""
 submitter: sybenx
 submission: https://github.com/sybenx/keykin-umbrel
+environment:
+  - name: KEYKIN_HOME_URL
+    services:
+      - server
+    note: Optional. The https address of the DMs home (bothy) this box keeps files for, for example https://home.example/. Set it to show the Shared home section to the home's owner and admins. Leave empty otherwise.
+  - name: KEYKIN_STORAGE_URL
+    services:
+      - server
+    note: Optional, with the home set. The https address of Keykin Storage on this box (its STORAGE_PUBLIC_URL), for space, the bin and linking the file server to the home.
