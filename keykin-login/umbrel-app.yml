@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-login
 category: social
 name: Keykin Login
-version: "0.1.34"
+version: "0.1.36"
 tagline: The account page for your Keykin box
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-login.svg
 description: >-
@@ -30,7 +30,8 @@ description: >-
 
   Beta: the way Keykin splits a key has not had an outside review.
 releaseNotes: >-
-  On your account page, each site or app can now do everything, posts and messages only, or posts only.
+  The Shared home section reads names and photos only from your home, signed in, now that
+  the home keeps them private. Someone who has shared no name shows as "No name shared".
 developer: sybenx
 website: https://github.com/sybenx/keykin
 dependencies:
