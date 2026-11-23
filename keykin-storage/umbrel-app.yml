@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-storage
 category: files
 name: Keykin Storage
-version: "0.3.0"
+version: "0.4.0"
 tagline: A home for your files, and your friends'
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-storage.svg
 description: >-
@@ -27,9 +27,8 @@ description: >-
 
   Beta: it has had two reviews, not an outside one.
 releaseNotes: >-
-  The owner of a home, and its admins, can now see how much space each person uses and what is
-  in the bin from their account page, and restore or erase files there. Restoring a file gives
-  it back to the person it belonged to.
+  Big files now upload in pieces, so a full-quality video of several gigabytes gets through and
+  picks up where it left off after a dropped connection.
 developer: sybenx
 website: https://github.com/sybenx/keykin-storage
 dependencies: []
