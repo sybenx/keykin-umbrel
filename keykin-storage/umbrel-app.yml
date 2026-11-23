@@ -2,7 +2,7 @@ manifestVersion: 1
 id: keykin-storage
 category: files
 name: Keykin Storage
-version: "0.4.0"
+version: "0.5.0"
 tagline: A home for your files, and your friends'
 icon: https://raw.githubusercontent.com/sybenx/keykin-umbrel/main/assets/keykin-storage.svg
 description: >-
@@ -27,8 +27,8 @@ description: >-
 
   Beta: it has had two reviews, not an outside one.
 releaseNotes: >-
-  Big files now upload in pieces, so a full-quality video of several gigabytes gets through and
-  picks up where it left off after a dropped connection.
+  With a home set, this box now keeps the keys and sealed messages of every group on that home,
+  so people who join a group later can read what was said before. It never opens a message.
 developer: sybenx
 website: https://github.com/sybenx/keykin-storage
 dependencies: []
